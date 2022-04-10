@@ -44,10 +44,11 @@ cd ..
 $(echo $CONFIGURE_KUBECTL)
 ```
 
-## Get pods to verify addon is running
+## Verify that velero addon is running
 
 ```sh
 kubectl get all -n velero
+
 NAME                          READY   STATUS    RESTARTS   AGE
 pod/velero-78b8ddfc56-jmkdm   1/1     Running   0          10m
 
@@ -59,6 +60,17 @@ deployment.apps/velero   1/1     1            1           10m
 
 NAME                                DESIRED   CURRENT   READY   AGE
 replicaset.apps/velero-78b8ddfc56   1         1         1       10m
+
+```
+
+## Get backup location 
+
+```sh
+
+velero backup-location get
+
+NAME      PROVIDER   BUCKET/PREFIX                                    PHASE     LAST VALIDATED   ACCESS MODE   DEFAULT
+default   aws        eks-tf-velero-backup20220410090713882000000001   Unknown   Unknown          ReadWrite  
 
 
 ```
