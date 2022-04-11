@@ -63,7 +63,7 @@ replicaset.apps/velero-78b8ddfc56   1         1         1       10m
 
 ```
 
-## Get backup location 
+## Get backup location using velero [CLI](https://velero.io/docs/v1.8/basic-install/#install-the-cli)
 
 ```sh
 
